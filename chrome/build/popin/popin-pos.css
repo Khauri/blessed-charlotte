@@ -1,0 +1,82 @@
+/**
+ * Styles the div generated 
+ * For popin.html's inner css styling, see popin.css
+ */
+div.cep-charlotte-extension-popin-container{
+    position : fixed;
+    z-index : 2147483640;
+    
+    opacity : 0.5;
+    transition: opacity .2s;
+    transition: top left bottom right .2s;
+
+    display : flex;
+    flex-direction : column;
+
+    background-color: rgba(0,0,0,1);
+}
+/**
+ * Put it in the bottom right hand corner when minimized
+ */
+div.cep-charlotte-extension-popin-container.charlotte-container-minimized{
+    bottom : 0px;
+    right : 0px;
+    /* Default values */
+    width : 100px;
+    height : 100px;
+    border-radius : 50%;
+}
+/*
+ * When dragging starts, maximize the window
+ */
+div.cep-charlotte-extension-popin-container.charlotte-container-maximized{
+    position : fixed; 
+    top : 30px;
+    left : 30px;
+    bottom : 30px;
+    right : 30px;
+}
+
+div.cep-charlotte-extension-popin-container:hover{
+    opacity : 1;
+}
+
+div.cep-charlotte-extension-popin-container.cep-charlotte-dragover-active{
+    opacity : 1;
+}
+
+div.cep-charlotte-extension-popin-dragbar{
+    display : hidden;
+    flex : 1 0 40px;
+    opacity : 0;
+    transition: opacity .2s;
+    background-color : darkgray;
+}
+
+div.cep-charlotte-extension-popin-dragbar:hover{
+    opacity : 1;
+}
+
+div.cep-charlotte-extension-popin{
+    background-color : white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border : none;
+    padding : 0;
+    margin : 0;
+    width : 100%;
+    height : 100%;
+}
+
+.ui-draggable-dragging:not(.cep-charlotte-extension-popin-container){
+    max-width : 300px;
+    max-height : 300px;
+    overflow : hidden;
+}
+
+.hova{
+    
+}
+
+.charlotte-highlight{
+    box-shadow: 0 0 5px #3fd290, 0 0 10px #36A9F7, 0 0 15px #36A9F7, 0 0 20px #36A9F7 !important;
+}
